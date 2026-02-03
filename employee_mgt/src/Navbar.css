@@ -1,0 +1,69 @@
+/* NAVBAR CONTAINER */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #0f172a; /* dark blue */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* NAV LIST */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+/* NAV ITEMS */
+.navbar ul li {
+  position: relative;
+}
+
+/* LINKS */
+.navbar ul li a {
+  text-decoration: none;
+  color: #e5e7eb;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.navbar ul li a:hover {
+  color: #38bdf8;
+}
+
+/* UNDERLINE ANIMATION */
+.navbar ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}
+
+/* ACTIVE LINK (optional with NavLink) */
+.active {
+  color: #38bdf8 !important;
+}
+
+/* SPACE FOR FIXED NAVBAR */
+body {
+  padding-top: 70px;
+}
